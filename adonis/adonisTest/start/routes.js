@@ -16,4 +16,12 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+//Route.on('/').render('welcome')
+
+Route.get('/', () => {
+    return {greeting: 'Hello world'}
+})
+
+Route.on('/users').render('welcome users')
+
+
